@@ -5,7 +5,9 @@ import com.insightfullogic.java8.examples.chapter1.SampleData;
 import com.insightfullogic.java8.answers.chapter3.Question1;
 import org.junit.Test;
 
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Stream;
 
 import static com.insightfullogic.java8.examples.chapter1.SampleData.*;
@@ -17,7 +19,8 @@ public class Question1Test {
     @Test
     public void addsEmptyList() {
         int result = com.insightfullogic.java8.answers.chapter3.Question1.addUp(Stream.empty());
-        assertEquals(0, result);
+        result = com.insightfullogic.java8.answers.chapter3.Question1.addUp(asList(1,2,3).stream());
+        assertEquals(6, result);
     }
 
     @Test
